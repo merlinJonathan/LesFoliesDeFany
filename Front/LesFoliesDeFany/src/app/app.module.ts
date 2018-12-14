@@ -12,12 +12,24 @@ import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
 import { AddUserReactiveFormComponent } from './add-user-reactive-form/add-user-reactive-form.component';
+import { UpdateUserReactiveFormComponent } from './update-user-reactive-form/update-user-reactive-form.component';
+import { Routes, RouterModule } from '@angular/router';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
+
+const route: Routes =
+  [
+    { path: 'addUser', component: AddUserReactiveFormComponent },
+    { path: 'deleteUser/:id', component: DeleteUserComponent },
+    { path: 'updateUser/:id', component: UpdateUserReactiveFormComponent },
+  ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddUserReactiveFormComponent
+    AddUserReactiveFormComponent,
+    UpdateUserReactiveFormComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +39,8 @@ import { AddUserReactiveFormComponent } from './add-user-reactive-form/add-user-
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(route),
   ],
   providers: [],
   bootstrap: [AppComponent]
