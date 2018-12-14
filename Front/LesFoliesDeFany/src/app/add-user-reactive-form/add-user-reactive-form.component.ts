@@ -20,7 +20,7 @@ export class AddUserReactiveFormComponent implements OnInit {
 		email: ['', [Validators.required, Validators.email]],
 		adresse: ['', Validators.required],
 		ville: ['', Validators.required],
-		codePostal: ['', Validators.compose([Validators.minLength(5),Validators.maxLength(5), Validators.required])],
+		codePostal: ['', Validators.compose([Validators.minLength(5),Validators.maxLength(5), Validators.required, Validators.pattern('[0-9]{5}$')])],
 		numTel: ['', Validators.maxLength(10)]
   }, {validator: this.serviceUser.verifierPassword('password', 'verificationPassword')});
 
