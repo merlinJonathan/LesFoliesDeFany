@@ -1,0 +1,15 @@
+<div *ngIf="this.tailleEcran >= 1024" class="ui-g">
+    <div class="ui-lg-1"></div>
+    <div class="ui-lg-10">
+        <p-menubar [model]="itemsLG">
+            <input type="text" pInputText placeholder="Search">
+            <button pButton label="Logout" icon="fa fa-sign-out"></button>
+        </p-menubar>
+    </div>  
+</div>
+<div *ngIf="this.tailleEcran < 1024" class="ui-g">
+    <div class="ui-g-1"></div>
+    <div class="ui-g-3 ui-md-2">
+        <p-panelMenu [model]="itemsMD"></p-panelMenu>
+    </div>  
+</div>

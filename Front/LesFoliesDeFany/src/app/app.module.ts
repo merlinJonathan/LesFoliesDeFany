@@ -11,10 +11,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {AccordionModule} from 'primeng/accordion'; 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
+import {MenubarModule} from 'primeng/menubar';
+import {PanelMenuModule} from 'primeng/panelmenu';
+
 import { AddUserReactiveFormComponent } from './add-user-reactive-form/add-user-reactive-form.component';
 import { UpdateUserReactiveFormComponent } from './update-user-reactive-form/update-user-reactive-form.component';
 import { Routes, RouterModule } from '@angular/router';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { MenuNavigationComponent } from './menu-navigation/menu-navigation.component';
 
 
 const route: Routes =
@@ -29,7 +33,8 @@ const route: Routes =
     AppComponent,
     AddUserReactiveFormComponent,
     UpdateUserReactiveFormComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    MenuNavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,8 @@ const route: Routes =
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(route),
+    MenubarModule,
+    PanelMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
