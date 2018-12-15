@@ -1,0 +1,9 @@
+fr\kurzen\lesFoliesDeFany\App.class
+fr\kurzen\lesFoliesDeFany\repository\MyUserRepository.class
+fr\kurzen\lesFoliesDeFany\controller\MyUserController.class
+fr\kurzen\lesFoliesDeFany\model\MyUser.class
+fr\kurzen\lesFoliesDeFany\enums\EnumRoles.class
+fr\kurzen\lesFoliesDeFany\service\MyUserService.class
+fr\kurzen\lesFoliesDeFany\security\AuthentificationService.class
+fr\kurzen\lesFoliesDeFany\security\WebSecurityConfig.class
+fr\kurzen\lesFoliesDeFany\security\SecurityInitializer.class
